@@ -38,7 +38,14 @@
 
 .card-front {
   &__wrapper {
-
+    &:hover {
+      .card-front__image {
+        filter: brightness(0.95);
+      }
+      h2 {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__image {
@@ -48,6 +55,8 @@
     background-color: red;
     background-image: url('https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg');
     background-size: cover;
+    filter: brightness(0.6);
+    transition: ease 0.6s;
   }
 
   &__content {
@@ -141,7 +150,13 @@
       text-decoration: none;
       color: black;
       .card-add__content i {
-        font-size: 72px;
+        font-size: 56px;
+      }
+      .card-add__image {
+        filter: brightness(0.95);
+      }
+      h2 {
+        text-decoration: underline;
       }
     }
   }
@@ -152,6 +167,8 @@
     background-color: red;
     background-image: url('https://cdn2.lamag.com/wp-content/uploads/sites/6/2019/02/brandons-1.jpg');
     background-size: cover;
+    filter: brightness(0.6);
+    transition: ease 0.6s;
   }
   &__content {
     display: flex;
