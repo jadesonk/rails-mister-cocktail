@@ -1,11 +1,13 @@
-<h1>Bartender</h1>
-
-<div class="grid-container">
-  <% @cocktails.each do |cocktail| %>
-    <%= render 'shared/card', cocktail: cocktail %>
-  <% end %>
+<div class="banner">
+  <h1>Mister Bartender</h1>
 </div>
 
 
-
-<%= link_to 'Create a cocktail', new_cocktail_path %>
+<div class="container">
+  <div class="grid-container">
+    <% @cocktails.each do |cocktail| %>
+      <%= render 'shared/card', cocktail: cocktail, dose: @dose %>
+    <% end %>
+    <%= render 'shared/add-card' %>
+  </div>
+</div>

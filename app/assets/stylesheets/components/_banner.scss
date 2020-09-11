@@ -1,0 +1,13 @@
+.banner {
+  background-image: url('https://assets.londonist.com/uploads/2016/10/i875/4322658427_3c659b16c2_o.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  // background-position: center;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  h1 {
+    color: #DD628C;
+    margin: 0 auto;
+  }
+}

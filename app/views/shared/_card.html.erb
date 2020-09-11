@@ -7,7 +7,8 @@
         <h2><%= cocktail.name %></h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sed, illo, blanditiis ullam a qui? Ducimus expedita.</p>
 
-        <button>See Ingredients</button>
+        <!-- <button>View Page</button> -->
+        <%= link_to 'View Page', cocktail_path(cocktail) %>
       </div>
     </div>
 
@@ -18,15 +19,15 @@
           <% cocktail.doses.each do |dose| %>
             <li>
               <%= dose.ingredient.name %> - <%= dose.description %>
-              <%= link_to dose_path(dose),
-                method: :delete,
-                data: { confirm: "Are you sure?" } do %>
-                  <i class="far fa-times-circle"></i>
-                <% end %>
             </li>
           <% end %>
         </ul>
       </div>
+      <%= simple_form_for([cocktail, @dose]) do |f| %>
+        <%= f.input :description, placeholder: 'Description here', label: false %>
+        <%= f.association :ingredient, prompt: 'Select an ingredient', label: false %>
+        <%= f.submit 'Add a dose', class: 'btn btn-add-dose' %>
+      <% end %>
     </div>
 
   </div>

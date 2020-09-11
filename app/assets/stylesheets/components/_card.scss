@@ -58,27 +58,67 @@
     position: relative;
     background-color: #f5f5f5;
     border-radius: 0px 0px 60px 60px;
-    button {
-      border: 0;
+    a {
+      border: 3px solid #DD628C;
       outline: 0;
       border-radius: 24px;
-      padding: 4px 32px;
-      background-color: transparent;
-      margin: 8px auto 0;
-      border: 4px solid blue;
+      padding: 4px 0px;
+      width: 60%;
+      margin: 12px auto 0;
+      background-color: #DD628C;
+      color: white;
+      font-weight: 700;
+      transition: ease 0.3s;
+      &:hover {
+        color: #DD628C;
+        border: 3px solid #DD628C;
+        background-color: transparent;
+        text-decoration: none;
+      }
     }
   }
 }
 
 .card-back {
   &__wrapper {
-    background-color: #2980b9;
+    background-color: #DD628C;
     color: white;
     transform: rotateY(180deg);
     border-radius: 60px;
     padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    border: 8px solid white;
+
     a .fa-times-circle {
       color: #f5f5f5;
+      cursor: pointer;
+    }
+
+    .new_dose {
+      margin-top: auto;
+      .form-control {
+        border: 3px solid white;
+        border-radius: 24px;
+        background-color: transparent;
+        color: #f5f5f5;
+        &::placeholder {
+          color: #f5f5f5;
+        }
+      }
+      .btn-add-dose {
+        border: 3px solid white;
+        border-radius: 24px;
+        background-color: transparent;
+        color: #f5f5f5;
+        transition: ease 0.3s;
+        width: 60%;
+        font-weight: 700;
+        &:hover {
+          color: #DD628C;
+          background-color: #f5f5f5;
+        }
+      }
     }
   }
 
@@ -86,10 +126,48 @@
     li {
       display: flex;
       justify-content: space-between;
-      // padding: 8px;
       align-items: center;
     }
   }
 }
 
-
+.card-add {
+  &__wrapper {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+    &:hover {
+      text-decoration: none;
+      color: black;
+      .card-add__content i {
+        font-size: 72px;
+      }
+    }
+  }
+  &__image {
+    width: 300px;
+    height: 250px;
+    border-radius: 60px 60px 0 0px;
+    background-color: red;
+    background-image: url('https://cdn2.lamag.com/wp-content/uploads/sites/6/2019/02/brandons-1.jpg');
+    background-size: cover;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    height: 250px;
+    width: 300px;
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 0px 0px 60px 60px;
+    text-align: center;
+    & i {
+      color: #DD628C;
+      font-size: 48px;
+      margin: 32px;
+      transition: 0.3s;
+    }
+  }
+}
