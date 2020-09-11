@@ -17,3 +17,7 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
+
+import { toggleFlip } from './toggleFlip'
+
+toggleFlip();
