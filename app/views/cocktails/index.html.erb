@@ -1,5 +1,11 @@
 <h1>Bartender</h1>
 
-<%= render 'shared/card' %>
+<div class="grid-container">
+  <% @cocktails.each do |cocktail| %>
+    <%= render 'shared/card', cocktail: cocktail %>
+  <% end %>
+</div>
+
+
 
 <%= link_to 'Create a cocktail', new_cocktail_path %>
